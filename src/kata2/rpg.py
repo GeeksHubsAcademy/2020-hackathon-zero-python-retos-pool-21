@@ -3,11 +3,14 @@
 import random
 import string
 
-def RandomPasswordGenerator(passLen=10):
-    #
-    #
-    
-    #
-    #
+letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
+numbers = '1234567890'
+special = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ!@#$%&^'
+chars = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ!@#$%&^1234567890'
 
-    return ""
+def RandomPasswordGenerator(passLen=10):
+    password= ''
+    for c in range(passLen):
+        password += random.choice(chars)
+
+    return password
